@@ -1,0 +1,1236 @@
+import java.util.*;
+public class javabasics{
+   // public static int CalculateSum(int num1 ,int num2){ //parametersor formal parameters
+   // int Sum = num1 + num2;
+   // return Sum;
+   // }
+
+
+   // Find the product of a&b
+   // public static int multiply(int a, int b){
+   // int product = a*b;
+   // return product;
+   // }
+
+
+   //[1] Factorial of a number , n
+   // public static int factorial(int n){
+   // int f = 1;
+   
+
+   // for(int i=1; i<=n; i++){
+   // f = f*i;
+   // }
+   // return f;//factorial of n
+   // }
+
+
+   //[2]Binomial Coefficient
+   // public static int factorial(int n) {
+   // int result = 1;
+   // for (int i = 2; i <= n; i++) {
+   //     result *= i;
+   // }
+   // return result;
+   // }
+   //public static int binCoeff(int n, int r){
+   // int fact_n = factorial(n);
+   // int fact_r = factorial(r);
+   // int fact_nmr = factorial(n-r);
+
+   // int binCoeff = fact_n/(fact_r*fact_nmr);
+   // return binCoeff;
+   //}
+
+
+
+   /// [3]Function overloading using parameters
+   //func to calc sum of 2 nmb
+   // public static int sum(int a, int b){
+   // return a+b;
+   // }
+
+   //func to calc sum of 3 numbs
+   // public static int sum(int a, int b, int c){
+   // return a+b+c;
+   // }
+
+
+
+   //[4]Function overloading using Data types
+   // func to cal int sum
+   // public static int sum(int a, int b){
+   // return a+b;
+   //}
+
+   // fuction to cal float sum
+   // public static float sum(float a, float b){
+   // return a+b;
+   //}
+
+
+
+   //[5]Check if a number is prime or not
+   //  public static boolean isPrime(int n){
+   //   boolean isPrime = true;
+   //   for(int i = 2; i<=n-1; i++){
+   //     if(n%i == 0){//completely dividing
+   //          isPrime = false;
+   //          break;
+   //     }
+   //   }
+   //   return isPrime;
+   //  }
+ 
+  
+   //[6]Check prime optimized
+    //  public static boolean isPrime(int n){
+    //   if(n == 2){
+    //   return true;
+    //   }
+    //   for(int i=2; i<=Math.sqrt(n); i++){
+    //     if(n % i==0){
+    //       return false;
+    //     }
+    //   }
+    //   return true;
+    //  }  
+
+
+    //[7] Print all Primes in a range 
+   //   public static boolean isPrime(int num) {
+   //     if (num <= 1) {
+   //         return false;
+   //     }
+   //     for (int i = 2; i < num; i++) {
+   //         if (num % i == 0) {
+   //             return false;
+   //         }
+   //     }
+   //     return true;
+   //    }
+   //   public static void primesInRange(int n){
+   //   for(int i = 2; i <= n; i++){
+   //   if(isPrime(i)){//true
+   //     System.out.print(i +" ");
+   //    }
+   //   }
+   //   System.out.println();
+   //  }
+
+
+
+   //[8]Convert from Binary to Decimal
+   //  public static void binToDec(int binNum){
+   //   int pow = 0;
+   //   int decNum = 0;
+
+   //   while(binNum > 0){
+   //     int lastDigit = binNum % 10;
+   //     decNum = decNum + (lastDigit * (int)Math.pow(2,pow)); 
+
+   //     pow++;
+   //     binNum = binNum/10;
+   //   }
+   //   System.out.println("decimal of" + binNum + "=" + decNum);
+   //  }
+
+
+
+   //[9]Convert to decimal to binary
+  //  public static void decToBin(int n){
+   //   int myNum = n;
+   //   int pow = 0;
+   //   int binNum = 0;
+
+   //   while(n >0){
+   //     int rem = n%2;
+   //     binNum = binNum +(rem * (int)Math.pow(10,pow));
+   //     pow++;
+   //     n = n/2;
+   //   }
+   //   System.out.println("binary form of"+ myNum +"=" + binNum);
+   //  }
+
+   // FUNCTIONS QUESTIONS
+     //[1] Write a java method to complete the average of three numbers. 
+     // public static void main(String[] args) {
+     // Scanner sc = new Scanner(System.in);
+
+     // System.out.print("Input the first number: ");
+     // double x = sc.nextDouble();
+     
+     // System.out.print("Input the second number: ");
+     // double y = sc.nextDouble();
+     
+     // System.out.print("Input the third number: ");
+     // double z = sc.nextDouble();
+     
+     // System.out.print("The average value is " + average(x, y, z) + "\n");
+     // }
+     
+     // public static double average(double x, double y, double z) {
+     // return (x + y + z) / 3;
+     // }
+     
+
+
+     /* [2]Write a method named isEven that accepts an int argument the method should return true if the argument
+     is the argument is even or false otherwise also write a program to test your method */
+
+     //  public static void main(String[] args){
+
+     //   Scanner sc = new Scanner(System.in);
+     //   int num;
+      
+     //   System.out.print("Enter an integer:");
+     //   num = sc.nextInt();
+
+     //   if(isEven(num)){
+     //     System.out.println(num+" is Even.");       
+     //   } else{
+     //     System.out.println(num +" is Odd." );
+     //   }
+     //  }
+     
+     //   public static boolean isEven(int number){
+     //     if(number % 2==0){
+     //       return true;
+     //     }
+     //     else{
+     //       return false;
+     //     }
+     //   }
+
+
+
+     /*[3]Write a Javaprogram to check if a number is a palindrome in Java?(121isapalindrome, 321 is not)
+     A number is called a palindrome if the number is equal to the reverse of a number e.g.,121 is a 
+     palindrome because the reverse of 121 is 121 itself.On the otherhand, 321 is not a palindrome because
+      the reverse of 321 is 123, which is not equal to 321.*/
+      // public static void main(String args []){
+      //   System.out.println("Please Enter a number:");
+      //   Scanner sc = new Scanner(System.in);
+      //   int palindrome = sc.nextInt();
+
+      //   if(isPalindrome(palindrome)){
+      //     System.out.print(palindrome + " Is a Palindrome");
+      //   }else{
+      //     System.out.print(palindrome +" Is Not a Palindrome ");
+      //   }
+      // }
+      
+      
+      // public static boolean isPalindrome(int number){
+      //   int palindrome = number;//copied number into variable
+      //   int reverse = 0;
+
+      //   while( palindrome!= 0){
+      //    int remainder=palindrome%10;
+      //    reverse=reverse*10+remainder;
+      //    palindrome=palindrome/10;
+      //   }
+      //   //if original and the reverse of number is equal means
+      //   //number is palindrome in java
+      //   if (reverse == number ){
+      //   return true ;//returning value as True for positive numbers only
+      //   }
+      //   return false;
+      // }
+
+
+
+      /*Hollow Rectangle pattern
+      public static void hollow_rectangle(int totRows, int totCols){
+        //outer loops 
+        for(int i=1; i<=totRows; i++){
+          //inner columns
+          for(int j=1; j<=totCols; j++){
+            //cell-(i,j)
+            if(i==1||i==totRows||j==1||j==totCols){
+              //boundry cells
+              System.out.print("*");
+            }else{
+              System.out.print(" ");
+            }
+          }
+          System.out.println();
+        }
+      }*/
+
+
+      //Inverted and Rotated half Pyramid
+      // public static void inverted_rotated_half_pyramid(int n){
+      //   //outer
+      //   for(int i=1; i<=n; i++){
+      //     //spaces before stars in each row
+      //     for(int j=1; j<=n-i; j++){
+      //       System.out.print(" ");
+      //     }
+      //     //stars of the pyramid shape
+      //     for(int j=1; j<=i; j++){
+      //       System.out.print("*");
+      //     }
+      //     System.out.println();//new line after every outer loop iteration
+      //   }
+      // }
+       
+
+      //Inverted half pyramid with numbers
+      // public static void inverted_half_pyramid_withnumbers(int n){
+      //   for(int i=1; i<=n; i++){
+      //     //inner numbers
+      //     for(int j=1; j<=n-i+1; j++){
+      //       System.out.print(j +" ");
+      //     }
+      //     System.out.println();
+      //   }
+      // } 
+
+
+      //Floyds Triangle
+      // public static void floyds_triangle(int n){
+      //   //outer
+      //   int counter=1;
+      //   for(int i=1; i<=n; i++){
+      //     //inner how many times will counter be printer
+      //     for(int j=1; j<=i; j++){
+      //       System.out.print(counter+" ");
+      //       counter++;
+      //     }
+      //     System.out.println();
+      //   }
+      // }
+
+
+     // 0-1 Triangle
+      //  public static void zero_one_triangle(int n){
+      //   for(int i = 1; i<=n; i++){
+      //     for(int j=1; j<=i; j++){
+      //       if((i+j) % 2==0){
+      //         System.out.print("1");
+      //       }else{
+      //         System.out.print("0");
+      //       }
+      //     }
+      //     System.out.println("");
+      //   }
+      //  }
+
+
+      //Butterfly Pattern
+      // public static void butterfly(int n){
+      //   //1st half
+      //   for(int i=1; i<=n; i++){
+
+      //     //stars-i
+      //     for(int j=1; j<=i; j++){
+      //       System.out.print("*");
+      //     }
+
+      //     //spaces-2*(n-i)
+      //     for(int j=1; j<=2*(n-i); j++){
+      //       System.out.print(" ");
+      //     }
+
+      //     //stars-i
+      //     for(int j=1; j<=i; j++){
+      //       System.out.print("*");
+      //     }
+      //     System.out.println();
+      //   }
+      //   //2 half
+      //   for(int i=n; i>=1; i--){
+
+      //      //stars-i
+      //     for(int j=1; j<=i; j++){
+      //       System.out.print("*");
+      //     }
+
+      //     //spaces-2*(n-i)
+      //     for(int j=1; j<=2*(n-i); j++){
+      //       System.out.print(" ");
+      //     }
+
+      //     //stars-i
+      //     for(int j=1; j<=i; j++){
+      //       System.out.print("*");
+      //     }
+      //     System.out.println();
+      //   }
+      // }
+
+
+
+      //Solid Rhombus
+      // public static void solid_rhombus(int n){
+      //   for(int i=1; i<=n; i++){
+
+      //     //spaces
+      //     for(int j=1; j<=(n-i); j++){
+      //       System.out.print(" ");
+      //     }
+
+      //     //Stars
+      //     for(int j=1; j<=n; j++){
+      //       System.out.print("*");
+      //     }
+      //     System.out.println();
+      //   }
+      // }
+
+
+      // public static void hollow_rhombus(int n){
+      //   for(int i=1; i<=n; i++){
+
+      //     //spaces
+      //     for(int j=1; j<=(n-i); j++){
+      //       System.out.print(" ");
+      //     }
+
+      //     //hollow rectangle-stars
+      //     for(int j=1; j<=n; j++){
+      //       if(i==1 || i==n || j==1 || j==n){
+      //           System.out.print("*");
+      //       }else{
+      //         System.out.print(" ");
+      //       }
+      //     }
+      //     System.out.println();
+      //   }
+      // }
+      
+      public static void main(String args []){
+
+        printMultiplicationTable(5);
+      }
+        //Hollow Rhombus
+       // hollow_rhombus(7);
+
+      //Solid Rhombus
+      /// solid_rhombus(5);
+
+      //Butterfly Triangle
+      //butterfly(6);
+
+      //0-1 Triangle
+      //zero_one_triangle(9);
+
+      //floyds_tiangle
+      // floyds_triangle(5);
+
+      //inverted_half_pyramid_withnumbers
+      //inverted_half_pyramid_withnumbers(8);
+
+      //Inverted Rotated half Pyramid
+      //inverted_rotated_half_pyramid(100);
+
+      //Hpllow rectangle pattern
+      // hollow_rectangle(20,10);
+
+     //[9] decToBin(88);
+
+     //[8]binToDec(100 );
+
+     //[7] primesInRange(100);//2 to 20
+
+     //[6]System.out.println(isPrime(9));
+
+     //[5] System.out.println(isPrime(12));
+
+     //[4] System.out.println(sum(3,5));
+     // System.out.println(sum(3.4f,4.5f));
+
+
+      //[3] System.out.println(sum(3,5));
+      // System.out.println(sum(5,2,1));
+
+     //[2] System.out.println(binCoeff(3,6));
+
+     // [1]System.out.println(factorial(7));
+
+      //multiply a&b
+     // int a = 3;
+     // int b = 5;
+     // int prod = multiply(a,b);
+     // System.out.println("a * b =" + prod);
+      // if we want some more values to multiply we can type the below code
+     // prod = multiply(10,20);
+     // System.out.println("a * b =" + prod);
+     
+      // Parameters and arguments
+     // Scanner sc = new Scanner(System.in);
+     // int a = sc.nextInt();
+     // int b = sc.nextInt();
+     // int Sum = CalculateSum(a,b); // arguments or actual parameters
+     // System.out.println("Sum is:" + Sum); 
+
+     
+     // Swap - values excahnge
+     // int a = 5;
+     // int b = 10;
+
+     //Swap
+     // int temp = a;
+     // a=b;
+     // b = temp;
+     // System.out.println("a=" + a);
+     // System.out.println("b=" + b); 
+
+     
+
+     ///Print Pattern
+      // System.out.println("****");
+      // System.out.println("***");
+      // System.out.println("**");
+      // System.out.println("*");
+
+
+      ///Byte data type
+      // byte b =  -124;
+      // System.out.println(b);
+
+      
+
+     /// Type Promotion in Expression
+     // char c = 'c';
+     // char b = 'b';
+     // System.out.println((int)(c));
+     // System.out.println((int)(b));
+     // System.out.println(c-b);
+
+      /// 2nd type
+    //  int a = 10;
+    //  float b = 20.25f;
+    // long c = 25;
+    // double d = 30;
+    // double ans = a + b + c + d;
+    // System.out.println(ans);
+
+
+   // byte b = 5;
+   //  byte a = b*2;
+   //  System.out.println(a);
+   // this gives us an erorr so we should do the following process
+
+   // byte b = 5;
+   // byte a = (byte) (b*2);
+   // System.out.println(a);
+
+     /// Area of Square
+ //  Scanner sc = new Scanner (System.in);
+ //  float side = sc.nextFloat();
+ //  float area = (side * side);
+ //  System.out.println(area);
+
+
+ /// Operators
+    /// Arithemetic Operators // Add
+   // int A = 10;
+   // int B = 5;
+   // System.out.println(A+B);
+
+    //Subtract
+   // int C = 10;
+   // int D = 5;
+   // System.out.println(C-D);
+
+    //Multiply
+   // int E = 10;
+   // int F = 5;
+   // System.out.println(E*F);
+   // same for division😉
+
+    /// Relational Operators (Equal too)
+   //  int A = 10;
+   // int B = 5;
+   //  System.out.println((A==B));
+
+   // int A = 10;
+   // int B = 10;
+   // System.out.println((A==B));
+ 
+    //(Not Equal too)
+   //  int A = 10;
+   //  int B = 5;
+   // System.out.println((A!=B));
+
+   // int C = 10;
+   // int D = 10;
+   // System.out.println((C!=D));
+
+   //(Greater)
+   // int A = 10;
+   // int B = 5;
+   // System.out.println(A>B);
+
+   // int C = 20;
+   // int D = 58;
+   // System.out.println(C>D);
+
+   //(Lesser)
+   // int A = 10;
+   // int B = 5;
+   // System.out.println(A<B);
+
+   // int C = 45;
+   // int D = 100;
+   // System.out.println(C<D);
+
+   /// Logical Operators 
+    // (1) && oparator
+    // System.out.println((3>2)&&(5>4));
+    // System.out.println((4>6)&&(3>2));
+    // System.out.println((4>2)&&(5>8));
+    // System.out.println((1>4)&&(4>9));
+
+    // (2) || operator
+   // System.out.println((4>2)||(3>2));
+   // System.out.println((9>3)||(1>5));
+   // System.out.println((3>8)||(5>1));
+   // System.out.println((1>9)||(6>8));
+
+    //(3) ! not operator
+   // System.out.println(!(3>2));
+   // System.out.println(!(0>1));
+
+
+   // Assignment Operators
+     // += Operator
+     // int A = 10;
+     //A =A+10;
+     //System.out.println(A);
+
+     // -= Operator
+     // int B = 5;
+     //B-=5;
+     //System.out.println(B);
+
+     //By the above addition and subtraction we can do multiplication and division also.
+
+     
+     //Questions and Answers
+     //(1)
+      //int x = 2, y = 5;
+     //int exp2 = (x * (y / x));
+     //System.out.print(exp2);
+
+     //(2)
+     //int x = 200, y = 50, z = 100;
+     //if(x > y && y > z)
+     //System.out.printl(n("Hello");
+     //if(z > y && z < x)
+     //System.out.println("Java");
+     //if((y+200) < x && (y+150) < z)
+     //System.out.println("Hello Java");
+
+     //(3)
+     //int x, y, z;
+     //x = y = z = 2;
+     //x += y;
+     //y -= z;
+     //z /= (x + y);
+     //System.out.println(x + " " + y + " " + z);
+
+     //(4)
+     //int x = 9, y = 12;
+     //int a = 2, b = 4, c = 6;
+     //int exp = 4/3 * (x + 34) + 9 * (a + b * c) + (3 + y * (2 + a)) / (a + b*y);
+     //System.out.println(exp);
+
+     //(5)
+     //int x = 10, y = 5;
+     //int exp1 = (y * (x / y + x / y));
+     //int exp2 = (y * x / y + y * x / y);
+     //System.out.println(exp1);
+     //System.out.println(exp2);
+
+
+     ///Conditional Statements :
+
+     // (1) If else Statements:
+     //int age = 22;
+     //if (age >= 18) {
+     // System.out.println("adult : Drive,Vote");
+      
+     //} else {
+     // System.out.println("not adult");
+      
+     //}
+
+     // int age = 16;
+     // if (age >= 18) {
+     // System.out.println("adult : Drive,Vote");
+
+     // } else {
+     // System.out.println("not adult");
+
+     //}
+ 
+     // int age = 16;
+     // if (age >= 18) {
+     // System.out.println("adult : Drive,Vote");
+     // }
+     //if (age > 13 && age < 18){
+     // System.out.println("teenager");
+     //}
+     //else {
+     // System.out.println("not adult");
+
+     //}
+
+
+     // Print the Largest of 2
+     // int A = 1;
+     // int B = 3;
+     // if (A >= B) {
+     //   System.out.println("A");
+
+     // } else {
+     //   System.out.println("B");
+        
+     // } 
+      
+     //  Scanner sc = new Scanner(System.in);
+     // int number = sc.nextInt();
+
+     // if(number % 2 == 0) {
+     // System.out.println("EVEN");
+     // } else {
+     // System.out.println("ODD");
+     // }
+     
+
+     /// Else if Statements
+     // int age = 13;
+     // if(age >= 18) {
+     // System.out.println("adult");
+     //}
+     // else if(age >= 13 && age < 18) {
+     // System.out.println("teenager");
+     //}
+     // else {
+     // System.out.println("child");
+     //}
+
+
+
+      //// Income Tax Calculator
+     // Scanner sc = new Scanner(System.in);
+     // int income = sc.nextInt();
+     // int tax;
+     // if(income < 500000){
+     //   tax = 0;
+     //}
+     // else if(income >= 500000 && income < 1000000){
+     //   tax = (int) (income*0.2);
+     // } 
+     // else{
+     //   tax = (int) (income*0.3);
+     // }
+     // System.out.println("your tax is:" + tax);
+
+     /// Print the largest of 3
+     // int A=1, B=3, C=6;
+     // if((A>=B && A>=C)) {
+     // System.out.println("largest is A");
+     // }
+     // else if(B>=C) {
+     // System.out.println("largest is B");
+     // }
+     // else{
+     // System.out.println("largest is C");
+     // }
+
+     /// Ternary Operator
+     // int number = 4;
+     // String type = ((number%2) == 0)? "even" : "odd";
+     // System.out.println(type);
+ 
+
+     // Check is a student will fail or pass
+     // int marks = 33;
+     // String reportcard = marks >= 33 ? "pass" : "fail";
+     // System.out.println(reportcard);
+
+
+     /// Switch Statements
+     // int number = 2;
+     // switch (number) {
+     // case 1 : System.out.println("samosa");
+     //           break;
+     // case 2 : System.out.println("burger");
+     //           break;
+     // case 3 : System.out.println("mango shake");
+     //            break;
+     // default:System.out.println("we wake up");
+        
+     //}
+
+
+     /// Calculator
+     // Scanner sc = new Scanner(System.in);
+     // System.out.println("enter a :");
+     // int a = sc.nextInt();
+     // System.out.println("enter b :");
+     // int b = sc.nextInt();
+     // System.out.println("enter opertor :");
+     // char operator = sc.next().charAt(0);
+
+     // switch(operator) {
+     // case '+' : System.out.println(a+b);
+     //             break;
+     // case '-' : System.out.println(a-b);
+     //             break;
+     // case '*' : System.out.println(a*b);
+     //             break;
+     // case '/' : System.out.println(a/b);
+     //             break;
+     // case '%' : System.out.println(a%b);
+     //             break;
+     // default  : System.out.println("wrong operator");                                                          
+     //  }
+
+
+     /// Conditional Statements Questions
+     /* [1]. write a java program to get a number from the user and print whether it is positive or 
+     negative */
+     // Scanner sc = new Scanner(System.in);
+     // int x = sc.nextInt();
+
+     // if (x > 0) {
+     //   System.out.println("x is greater than 0");
+     // } else {
+     //   System.out.println("x is less than 0");
+     // java javabasics.java }
+     
+     /* [2]. Finish the following code so that it prints you have a fever if your temprature is above 
+     100 and otherwise prints you dont have a fever
+      */ 
+     // double temp = 103.5;
+
+     // if (temp > 100) {
+     //   System.out.println("you have a fever");
+     // } else {
+     //   System.out.println("you don't have a fever");
+     // }
+
+     /* [3]. write a java program to input week number (1-7) and print day of week name using
+     switch case    
+      */
+     // Scanner sc = new Scanner(System.in);
+      //Input week number from user
+
+     // System.out.println("enter week number (1-7):");
+     // int week = sc.nextInt();
+
+     // switch(week) {
+     //   case 1 : 
+     //           System.out.println("Monday");
+
+     //           break;
+     //   case 2 :
+     //           System.out.println("Tuesday");
+                
+     //           break;
+     //   case 3 :
+     //           System.out.println("Wednesday");
+                
+     //           break;
+     //   case 4 :
+     //           System.out.println("Thursday");
+                
+     //           break;
+     //   case 5 : 
+     //           System.out.println("Friday");
+                
+     //           break;
+     //   case 6 :
+     //           System.out.println("Saturday");
+                
+     //           break;
+     //   case 7 :
+     //           System.out.println("Sunday");
+                
+     //           break;
+     //   default :
+     //            System.out.println("Invalid input! Please enter number between (1-7.)");        
+     // }
+
+     /*[5]. Write a java program that takes a year from a user and print whether taht year is a leap
+            year or not     
+      */
+     // Scanner sc = new Scanner(System.in);
+     // System.out.print("Input the year: ");
+     // int year=sc.nextInt();
+     // boolean x= (year % 4) ==0;
+     // boolean y= (year % 100) !=0;
+     // boolean z= ((year % 100==0) && (year % 400==0));
+     // if (x&& (y||z)) {
+     //   System.out.println(year+" is a leap year");
+     // }else{
+     //     System.out.println(year+" is not a leapyear");
+     // }
+
+
+     /// LOOPS
+     //Types of Loops
+     /*1. while loop
+       2. for loop
+       3. do while loop */
+     //1. While loop
+     // int counter = 0;
+     // while(counter < 100) {
+     // System.out.println("Hello World");
+     //   counter++;
+     // }
+     // System.out.println("printed HW 100x");
+
+     //Print number from 1 to 10
+      // int counter = 1;
+     // while (counter <= 10) {  
+     // System.out.println(counter++);
+     // }
+
+     
+     // Print number from 10 to n
+     // Scanner sc = new Scanner(System.in);
+     // int range = sc.nextInt();
+     // int counter = 1;
+
+     // while(counter <= range) {
+     // System.out.println(counter + " ");
+     // counter++;
+     // }
+     // System.out.println();
+
+     
+     /// Print sum of first n natural numbers
+    //  Scanner sc = new Scanner(System.in);
+     // int n = sc.nextInt();
+     // int sum = 0;
+
+     // int i = 1;
+     // while(i <= n) {
+     //  sum += i;
+     // i++; 
+     // }
+     // System.out.println("sum is :" + sum);
+
+
+
+     ///FOR LOOP
+
+     // for (int i = 1; i <= 100; i++) {
+     //  System.out.println("Hello World!");
+     // }
+   
+     // print square pattern
+     // for(int line=1; line<=4; line++) {
+     // System.out.println("****");
+     //}
+
+     //int size = 7; // Adjust the size of the square as needed
+
+     //for (int row = 1; row <= size; row++) {
+     //for (int col = 1; col <= size; col++) {
+     //   System.out.print("*");
+     //}
+      //System.out.println();}
+
+
+     // Print reverse of a number
+     // int n = 90704;
+     
+     // while(n > 0 ){
+     //  int lastDigit = n % 10;
+     // System.out.print(lastDigit);
+     // n = n / 10;
+
+     //}
+
+
+     // Reverse the given number
+     // int n = 10899;
+     // int rev = 0;
+     // while(n > 0){
+     //  int lastDigit = n % 10;
+     //        rev = rev * 10 + lastDigit;
+     //       n = n/10;
+     //}
+     // System.out.println(rev);
+
+
+
+     /// DO-WHILE LOOP
+     // int counter = 1;
+     // do {
+     // System.out.println("Hello world!");
+     // counter++;
+
+     // } while(counter<=10);
+
+
+     /// Break statement
+     // for(int i = 1; i <=5; i++){
+     //  if(i == 3){
+     //   break;
+     // }
+     // System.out.println(i);
+     // }
+     // System.out.println("I am out of the loop");
+
+
+     
+     /// keep entering numbers till user enters a multiple of 10
+
+     // Scanner sc = new Scanner(System.in);
+     // do{
+     //   System.out.print("enter your number:");
+     //   int n = sc.nextInt();
+
+     //   if (n % 10==0){
+     //     break;
+     //   }
+     //   System.out.println(n);
+     // }while(true);
+
+
+
+     //// Continue Statement
+     // for(int i = 1; i <= 5; i++){
+     // if (i == 3){
+     //   continue;
+     // }
+     // System.out.println(i);
+     // }
+
+
+
+     ///Display all numbers entered by user except multiples of 10
+
+     // Scanner sc = new Scanner(System.in);
+
+     // do{
+     //   System.out.print("enter your number");
+     //   int n = sc.nextInt();
+
+     //   if(n % 10==0){
+     //     continue;
+     //   }
+     //   System.out.println("number was :" + n);
+     // } while(true);
+
+
+
+     //// Check if a number is prime or not
+
+     // Scanner sc = new Scanner(System.in);
+     // int n = sc.nextInt();
+
+     // if(n == 2){
+     // System.out.println("n is prime");
+     // }else{
+     // boolean isPrime = true;
+     // for(int i = 2; i <= n-1; i++){
+     //   if(n % i==0){// n is a multiple of i(i not equal to 1 or n)
+     //     isPrime = false;
+     //   }
+     // }
+     // if(isPrime == true){
+     //   System.out.println("n is prime");
+     // }else{
+     //   System.out.println("n is not prime");
+     // }
+     // }
+
+
+     
+      /// LOOPS QUESTIONS
+     // 1] How many "Hello" is printed.
+     // for(int i=0; i<5; i++) {
+     // System.out.println("Hello");
+     // i+=2;} 
+
+
+     // 2] Write a program that reads a set of integers and then prints the sum of even and odd integers 
+
+     // Scanner sc = new Scanner(System.in);
+
+     // int number;
+     // int choice;
+     // int evensum = 0;
+     // int oddsum = 0;
+
+     // do{
+     // System.out.print("Enter the number");
+     // number = sc.nextInt();
+
+     //  if(number % 2==0){
+     //   evensum += number;
+     // }else{
+     //   oddsum += number;
+     // }
+
+     // System.out.print("Do you want to continue? press 1 for yes or 0 for no");
+
+     // choice = sc.nextInt();
+     // }while(choice == 1);
+
+     // System.out.println("sum of even numbers:" + evensum);
+     // System.out.println("sum of odd numbers:" + oddsum);
+
+
+     // 3] Write a program to find the factorial of any number entered by the user
+
+     // Scanner sc = new Scanner(System.in);
+     // int num; //to hold number
+     // int fact = 1; //to hold fact
+
+     // System.out.print("Enter any positive integer:");
+     // num = sc.nextInt();
+
+     // for(int i = 1; i <= num; i++){
+     //  fact*=i;
+     // }
+     // System.out.println("Factorial:" + fact);
+      
+
+     /// 4] Write a program to print the multiplication table of a number N, entered by the user
+     // class Multiplicationtable{
+     //  public static void printMultiplicationTable(int number){
+     //   Scanner sc = new Scanner(System.in);
+     //   System.out.print("Enter number");
+     //   int n = sc.nextInt();
+     //   for(int i=1; i<=10; i++){
+     //     System.out.println(n+"*"+i+"="+n*i);
+     //   }
+
+     //  }
+     //  public static void main(String s[]){
+     //   printMultiplicationTable(5);
+     //  }
+     // }
+
+
+
+     /// PATTERNS (part 1)
+     /// Print star pattern
+
+     // for(int line = 1; line <= 10; line++){
+     //   for(int star = 1; star <= line; star++){
+     //     System.out.print("*");
+     //   }
+     //   System.out.println();
+     // }
+
+     
+     // Print Inverted star pattern
+     // int n = 4;
+     // for(int line=1; line<=n; line++){
+     // for(int star=1; star<=n-line+1; star++){
+     //   System.out.print("*");
+     // }
+     // System.out.println();
+     // }
+
+
+
+     // Print half pyramid pattern
+     // int n = 50;
+     // for(int line = 1; line <= n; line++){
+     //  for(int number = 1; number <= line; number++){
+     //    System.out.print(number);
+     //  }
+     //  System.out.println();
+     // }
+
+
+
+     // Print Character pattern
+     // int n = 7;
+     // char ch = 'A';
+
+     // for(int line = 1; line <= n; line++){
+     // for(int chars = 1; chars <= line; chars++){
+     //   System.out.print(ch);
+     //   ch++;
+     // }
+     // System.out.println();
+     // }
+
+
+     ///Question 2: Write a program that reads a set of integers, and then prints the sum of the even and odd integers.
+     //import java.util.Scanner;
+     //public class Solution {
+     //public static void main(String[] args) {
+    //  Scanner sc = new Scanner(System.in);
+     
+    //  int number;
+    //  int choice;
+    //  int evenSum = 0;
+    //  int oddSum = 0;
+     
+    //  do {
+    //      System.out.print("Enter the number");
+    //      number = sc.nextInt();
+     
+    //  if( number % 2 == 0) {
+    //      evenSum += number;
+    //   } else {
+    //      oddSum += number;
+    //   }
+    //  System.out.print("Do you want to continue? Press 1 for yes or 0 for no");
+    //       choice = sc.nextInt();
+      
+    //  } while(choice==1);
+      
+    //   System.out.println("Sum of even numbers: " + evenSum);
+    //  System.out.println("Sum of odd numbers:" + oddSum);
+    //   }
+    
+
+
+ //  importjava.util.*;
+  //class MultiplicationTable  {
+  // public static void printMultiplicationTable(int number){
+  //   Scanner sc=new Scanner(System.in);
+  //   System.out.print("Enter number:");
+  //   int n=sc.nextInt();
+  //   for(int i=1;i<=10;i++) {
+  //     System.out.println(n+" * "+i+" ="+n*i);
+  //     }
+  //    }
+    // public static void main(String s[]) {
+      
+    // }
+   // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+    
+
+    
+ }
+}
+//boilerplate code
